@@ -1,0 +1,19 @@
+{
+  "portal": [
+    {
+      "email": "ghitabizau27@gmail.com",
+      "properties": {
+        "fullname": "My library",
+        "location": "World"
+      },
+      "groups": [
+      ],
+      "roles": [
+        "Member"
+      ],
+      "username": "mylibrary"
+    }
+  ],
+    "team": [
+  ]
+}

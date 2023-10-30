@@ -59,3 +59,14 @@ $ make start-backend
 $ make start-frontend
 
 Default login: u: admin, p: admin
+
+
+PUBLISH ON GITHUB
+===============================================================================
+Create repository: https://github.com/GhitaB/plone6.mylibrary
+$ cd ghita-work
+$ git clone git@github.com:GhitaB/plone6.mylibrary.git
+Copy all files and directories from testproject/mylibrary
+$ git add .
+$ git commit -m "Add project starter."
+$ git push

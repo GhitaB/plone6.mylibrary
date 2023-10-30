@@ -1,0 +1,4 @@
+src/**/CHANGELOG.md
+src/**/README.md
+!src/addons/volto-mylibrary
+!src/addons/volto-mylibrary
