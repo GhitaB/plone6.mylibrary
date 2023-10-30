@@ -57,3 +57,5 @@ $ cd testproject/mylibrary
 $ nvm use v18
 $ make start-backend
 $ make start-frontend
+
+Default login: u: admin, p: admin
