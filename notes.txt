@@ -1,0 +1,59 @@
+CREATE PROJECT
+===============================================================================
+$ mkdir testproject
+$ cd testproject
+$ pip install pipx
+$ nvm install 18
+$ nvm use v18
+$ pipx run cookiecutter gh:collective/cookiecutter-plone-starter
+    re-download                          y
+    Project Title                        My library
+    Project Description                  A simple books manager
+    Project Slug                         mylibrary
+    Project URL                          books.ghitab.net
+    Author                               Ghita Bizau
+    Author E-mail                        ghitabizau27@gmail.com
+    Python Package Name                  mylibrary
+    Volto Addon Name                     volto-mylibrary
+    Python Test Framework                pytest
+    Plone Version                        6.0.7
+    Should we use Volto Alpha Versions?  No
+    Volto Version                        17.3.0
+    Volto Generator Version              7.0.1
+    Language                             English
+    GitHub Username or Organization      GhitaB
+    Container Registry                   Docker Hub
+    Add Ansible playbooks?               No
+    Add GitHub Action to Deploy this?    No
+
+
+$ cd mylibrary
+$ cd frontend
+
+$ yarn add @kitconcept/volto-light-theme
+$ yarn add @kitconcept/volto-separator-block
+$ npm install -g @plone/generator-volto
+$ mv src/addons/volto-mylibrary/ src/addons/volto-mylibrary-old/
+$ yo @plone/volto:addon volto-mylibrary
+
+In frontend/package.json update/add:
+  "addons": [
+    "@kitconcept/volto-separator-block",
+    "@kitconcept/volto-light-theme",
+    "volto-mylibrary"
+  ],
+  "theme": "@kitconcept/volto-light-theme",
+
+In frontend:
+$ yarn
+
+In mylibrary:
+$ make install
+
+
+START PROJECT
+===============================================================================
+$ cd testproject/mylibrary
+$ nvm use v18
+$ make start-backend
+$ make start-frontend
