@@ -18,7 +18,7 @@ $ make start-frontend
 [Error when uploading large files](https://community.plone.org/t/plone-6-0-8-soft-released/18086#error-when-uploading-large-files-3)
 
 ```
-In studyindenmark/backend/instance/etc/zope.conf
+In mylibrary/backend/instance/etc/zope.conf
 update
 form-memory-limit 20MB
 Restart backend, retry upload.
